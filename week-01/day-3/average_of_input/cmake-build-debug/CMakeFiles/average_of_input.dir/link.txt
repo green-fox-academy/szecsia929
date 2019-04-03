@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/average_of_input.dir/main.cpp.o  -o average_of_input.exe -Wl,--out-implib,libaverage_of_input.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

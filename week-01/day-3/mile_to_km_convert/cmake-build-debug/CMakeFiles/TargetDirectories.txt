@@ -1,0 +1,3 @@
+/cygdrive/d/greenfox/szecsia929/week-01/day-3/mile_to_km_convert/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-3/mile_to_km_convert/cmake-build-debug/CMakeFiles/mile_to_km_convert.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-3/mile_to_km_convert/cmake-build-debug/CMakeFiles/edit_cache.dir
