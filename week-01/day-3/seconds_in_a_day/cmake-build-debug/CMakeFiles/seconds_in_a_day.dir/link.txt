@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/seconds_in_a_day.dir/main.cpp.o  -o seconds_in_a_day.exe -Wl,--out-implib,libseconds_in_a_day.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

@@ -1,0 +1,3 @@
+/cygdrive/d/greenfox/week1/day3/variables/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/greenfox/week1/day3/variables/cmake-build-debug/CMakeFiles/variables.dir
+/cygdrive/d/greenfox/week1/day3/variables/cmake-build-debug/CMakeFiles/edit_cache.dir
