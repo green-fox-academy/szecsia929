@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/colors.dir/main.cpp.o  -o colors.exe -Wl,--out-implib,libcolors.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

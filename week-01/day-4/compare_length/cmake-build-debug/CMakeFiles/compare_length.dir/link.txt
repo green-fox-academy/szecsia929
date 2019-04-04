@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/compare_length.dir/main.cpp.o  -o compare_length.exe -Wl,--out-implib,libcompare_length.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

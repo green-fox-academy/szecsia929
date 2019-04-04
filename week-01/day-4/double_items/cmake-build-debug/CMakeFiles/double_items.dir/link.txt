@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/double_items.dir/main.cpp.o  -o double_items.exe -Wl,--out-implib,libdouble_items.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

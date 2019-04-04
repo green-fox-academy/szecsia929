@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/print_elements.dir/main.cpp.o  -o print_elements.exe -Wl,--out-implib,libprint_elements.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

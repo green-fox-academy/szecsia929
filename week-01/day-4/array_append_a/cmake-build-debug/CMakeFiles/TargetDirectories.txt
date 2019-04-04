@@ -1,0 +1,3 @@
+/cygdrive/d/greenfox/szecsia929/week-01/day-4/array_append_a/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-4/array_append_a/cmake-build-debug/CMakeFiles/array_append_a.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-4/array_append_a/cmake-build-debug/CMakeFiles/edit_cache.dir

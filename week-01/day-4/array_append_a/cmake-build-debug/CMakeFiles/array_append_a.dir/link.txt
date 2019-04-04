@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/array_append_a.dir/main.cpp.o  -o array_append_a.exe -Wl,--out-implib,libarray_append_a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

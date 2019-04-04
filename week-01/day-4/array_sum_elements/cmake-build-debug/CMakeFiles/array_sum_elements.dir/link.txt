@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/array_sum_elements.dir/main.cpp.o  -o array_sum_elements.exe -Wl,--out-implib,libarray_sum_elements.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

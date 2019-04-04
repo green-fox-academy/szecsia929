@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/sum_elements.dir/main.cpp.o  -o sum_elements.exe -Wl,--out-implib,libsum_elements.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
