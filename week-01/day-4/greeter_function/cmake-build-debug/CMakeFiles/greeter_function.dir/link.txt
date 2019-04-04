@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/greeter_function.dir/main.cpp.o  -o greeter_function.exe -Wl,--out-implib,libgreeter_function.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

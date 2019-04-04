@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/swap.dir/main.cpp.o  -o swap.exe -Wl,--out-implib,libswap.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

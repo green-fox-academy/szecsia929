@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/factorio.dir/main.cpp.o  -o factorio.exe -Wl,--out-implib,libfactorio.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

@@ -1,0 +1,3 @@
+/cygdrive/d/greenfox/szecsia929/week-01/day-4/factorio/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-4/factorio/cmake-build-debug/CMakeFiles/factorio.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-4/factorio/cmake-build-debug/CMakeFiles/edit_cache.dir
