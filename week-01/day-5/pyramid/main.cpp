@@ -20,8 +20,10 @@ int main(int argc, char *args[]) {
 
     for (int i = 0; i < a; ++i) {
         for (int j = 0; j < 2 * a; ++j) {
-            if(){
-                std::cout<<"*";
+            if (j == a || j == a + i || j == a - i) {
+                std::cout << "*";
+            }else{
+                std::cout<<" ";
             }
         }
         std::cout << std::endl;
