@@ -1,0 +1,3 @@
+/cygdrive/d/greenfox/szecsia929/week-01/day-5/parametric_average/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-5/parametric_average/cmake-build-debug/CMakeFiles/parametric_average.dir
+/cygdrive/d/greenfox/szecsia929/week-01/day-5/parametric_average/cmake-build-debug/CMakeFiles/edit_cache.dir

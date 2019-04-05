@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/print_even.dir/main.cpp.o  -o print_even.exe -Wl,--out-implib,libprint_even.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/print_bigger.dir/main.cpp.o  -o print_bigger.exe -Wl,--out-implib,libprint_bigger.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

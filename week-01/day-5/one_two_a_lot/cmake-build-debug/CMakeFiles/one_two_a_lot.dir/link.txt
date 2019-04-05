@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/one_two_a_lot.dir/main.cpp.o  -o one_two_a_lot.exe -Wl,--out-implib,libone_two_a_lot.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

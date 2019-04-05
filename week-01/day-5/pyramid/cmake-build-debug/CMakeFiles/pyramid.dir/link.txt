@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/pyramid.dir/main.cpp.o  -o pyramid.exe -Wl,--out-implib,libpyramid.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

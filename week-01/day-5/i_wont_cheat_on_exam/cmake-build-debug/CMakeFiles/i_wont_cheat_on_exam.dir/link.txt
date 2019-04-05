@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/i_wont_cheat_on_exam.dir/main.cpp.o  -o i_wont_cheat_on_exam.exe -Wl,--out-implib,libi_wont_cheat_on_exam.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
