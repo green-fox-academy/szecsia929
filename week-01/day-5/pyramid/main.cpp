@@ -18,12 +18,12 @@ int main(int argc, char *args[]) {
     std::cout << "How many rows should there be? ";
     std::cin >> a;
 
-    for (int i = 0; i < a; ++i) {
-        for (int j = 0; j < 2 * a; ++j) {
-            if (j == a || j == a + i || j == a - i) {
+    for (int i = 0; i < a+1; ++i) {
+        for (int j = 0; j < 2 * a+1; ++j) {
+            if (j > a+1 - i && j < a+1 + i) {
                 std::cout << "*";
-            }else{
-                std::cout<<" ";
+            } else {
+                std::cout << " ";
             }
         }
         std::cout << std::endl;
