@@ -1,103 +1,65 @@
+
 #include <iostream>
 
-void pointerType();
+int askForNumber();
 
-void printValue();
+int arrayFill(int index);
 
-void changeValue();
-
-void adding();
-
-int *findMinimum(int array[], int arraySize);
-
-void swap(int *IntPtr1, int *IntPtr2);
-
+int *biggest(int *array, int size);
 
 int main() {
+    // Create a program which first asks for a number
+    // this number indicates how many integers we want to store in an array
+    // and than asks for numbers till the user fills the array
+    // It should print out the biggest number in the given array and the memory address of it
+
     // Refactor time!
     // use your 'refactor_maximum.cpp', solve the same exercise by creating a separate function
     // for each functionality
 
-    int a = 10;
-    int b = 316;
-    int *aPtr = &a;
-    int *bPtr = &b;
-    int numbers[] = {12, 4, 66, 101, 87, 3, 15};
+    int number = askForNumber();
+    int array[number];
 
-    pointerType();
-    printValue();
-    changeValue();
-    adding();
-    std::cout << "The address of the minimum: " << findMinimum(numbers, sizeof(numbers) / sizeof(numbers[0]))<< std::endl;
-    std::cout << "The minimum itself: " << *findMinimum(numbers, sizeof(numbers) / sizeof(numbers[0])) << std::endl;
-    std::cout << "Before\n a=" << a << "\n b=" << b << std::endl;
-    swap(aPtr, bPtr);
-    std::cout << "After\n a=" << a << "\n b=" << b << std::endl;
+    for (int i = 0; i < number; i++) {
+        array[i] = arrayFill(i);
+    }
+
+    std::cout << "Address of the start of the array: " << array << std::endl;
+    std::cout << "Address of the bigest number: " << biggest(array, number);
 
     return 0;
 }
 
-void pointerType() {
+int askForNumber() {
+    int number;
+    std::cout << "Pls give me a number! ";
+    std::cin >> number;
 
-    int a = 31;
-    double b = 432.2;
-    std::string name = "Bob";
+    return number;
 
-    int *aPointer = &a;
-    double *bPointer = &b;
-    std::string *namePointer = &name;
-
-    std::cout << *aPointer << std::endl;
-    std::cout << *bPointer << std::endl;
-    std::cout << *namePointer << std::endl;
 }
 
-void printValue() {
+int arrayFill(int index) {
 
-    int age = 31;
-    int *agePointer = &age;
+    int value;
 
-    std::cout << *agePointer << std::endl;
+    std::cout << index + 1 << ".number: ";
+    std::cin >> value;
+
+    return value;
+
 }
 
-void changeValue() {
+int *biggest(int array[], int size) {
 
-    float temperature = 21.3;
-    float *temperaturePointer = &temperature;
-    *temperaturePointer = 0.99;
+    int max = 0, *maxAddress = array;
 
-    std::cout << temperature << std::endl;
-}
-
-void adding() {
-
-    int a = 20;
-    int b = 17;
-    int *aPointer = &a;
-    int *bPointer = &b;
-    int sum = *aPointer + *bPointer;
-
-    std::cout << sum << std::endl;
-}
-
-int *findMinimum(int array[], int arraySize) {
-
-    int *minimum = array;
-
-    for (int i = 0; i < arraySize; ++i) {
-        if (array[i] < *minimum) {
-            minimum = &array[i];
+    for (int i = 0; i < size; ++i) {
+        if (array[i] > max) {
+            max = array[i];
+            maxAddress = &array[i];
         }
     }
 
-    return minimum;
-}
-
-void swap(int *IntPtr1, int *IntPtr2) {
-
-    int buffer = *IntPtr1;
-
-    *IntPtr1 = *IntPtr2;
-    *IntPtr2 = buffer;
-
+    return maxAddress;
 }
