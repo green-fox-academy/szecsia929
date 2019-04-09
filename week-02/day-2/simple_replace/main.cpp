@@ -4,7 +4,7 @@
 int main(int argc, char* args[])
 {
     std::string example("In a dishwasher far far away");
-    example.replace(5, 10, "galaxy");
+    example.replace(example.find("dishwasher"), sizeof("dishwasher"), "galaxy ");
 
     // I would like to replace "dishwasher" with "galaxy" in this example, but it has a problem.
     // Please fix it for me!
