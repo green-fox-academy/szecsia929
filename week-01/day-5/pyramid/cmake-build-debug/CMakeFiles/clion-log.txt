@@ -1,18 +1,33 @@
-C:\Users\user\.CLion2019.1\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/cygwin64/bin/make.exe -G "CodeBlocks - Unix Makefiles" /cygdrive/d/greenfox/szecsia929/week-01/day-5/pyramid
--- The C compiler identification is GNU 7.4.0
--- The CXX compiler identification is GNU 7.4.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++.exe
--- Check for working CXX compiler: /usr/bin/c++.exe -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: /cygdrive/d/greenfox/szecsia929/week-01/day-5/pyramid/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/cygwin64/bin/make.exe -G "CodeBlocks - MinGW Makefiles" D:\greenfox\szecsia929\week-01\day-5\pyramid
+-- The C compiler identification is GNU 8.1.0
+-- The CXX compiler identification is GNU 8.1.0
+-- Check for working C compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe
+-- Check for working C compiler: C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe -- broken
+CMake Error at C:/Program Files/JetBrains/CLion 2019.1/bin/cmake/win/share/cmake-3.13/Modules/CMakeTestCCompiler.cmake:52 (message):
+  The C compiler
+
+    "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: D:/greenfox/szecsia929/week-01/day-5/pyramid/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_6d730/fast"
+    /usr/bin/make -f CMakeFiles\cmTC_6d730.dir\build.make CMakeFiles/cmTC_6d730.dir/build
+ 
+ 
+     make: *** [Makefile:120: cmTC_6d730/fast] Error 1
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/greenfox/szecsia929/week-01/day-5/pyramid/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "D:/greenfox/szecsia929/week-01/day-5/pyramid/cmake-build-debug/CMakeFiles/CMakeError.log".
