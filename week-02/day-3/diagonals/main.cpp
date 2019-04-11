@@ -22,19 +22,17 @@ SDL_Renderer* gRenderer = nullptr;
 
 void draw()
 {
-    // Draw a box that has different colored lines on each edge.
-    // The center of the box should align with the center of the screen.
-    SDL_SetRenderDrawColor(gRenderer, 0xFF /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/3, SCREEN_HEIGHT/3, SCREEN_WIDTH-SCREEN_WIDTH/3, SCREEN_HEIGHT/3);
+    // Draw the canvas' diagonals.
+    // If it starts from the upper-left corner it should be green, otherwise it should be red.
+    for(int i = 0; i < SCREEN_WIDTH; i+=20){
+        for(int j = 0; j < SCREEN_HEIGHT; j+=20){
+            if(){
+                SDL_SetRenderDrawColor(gRenderer, 0xFF /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
+                SDL_RenderDrawLine(gRenderer, i, j, SCREEN_WIDTH+i, SCREEN_HEIGHT+j);
+            }
+        }
+    }
 
-    SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0xFF /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/3, SCREEN_HEIGHT/3, SCREEN_WIDTH/3, SCREEN_HEIGHT-SCREEN_HEIGHT/3);
-
-    SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0xFF /*B*/, 0xFF /*A*/);
-    SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH/3, SCREEN_HEIGHT-SCREEN_HEIGHT/3,SCREEN_WIDTH-SCREEN_WIDTH/3, SCREEN_HEIGHT-SCREEN_HEIGHT/3);
-
-    SDL_SetRenderDrawColor(gRenderer, 0x00 /*R*/, 0x00 /*G*/, 0x00 /*B*/, 0xFF /*A*/);
-    SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH-SCREEN_WIDTH/3, SCREEN_HEIGHT/3, SCREEN_WIDTH-SCREEN_WIDTH/3, SCREEN_HEIGHT-SCREEN_HEIGHT/3);
 }
 
 bool init()
@@ -47,7 +45,7 @@ bool init()
     }
 
     //Create window
-    gWindow = SDL_CreateWindow( "Colored Box", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+    gWindow = SDL_CreateWindow( "Diagonals", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if( gWindow == nullptr )
     {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << std::endl;
