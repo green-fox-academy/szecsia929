@@ -9,7 +9,6 @@ int main() {
 
     std::string xInit = "ABCD cc xx cc kk cxc green fox";
     std::cout << xTerminate(xInit) << std::endl;
-    std::cout << xInit;
     return 0;
 }
 
