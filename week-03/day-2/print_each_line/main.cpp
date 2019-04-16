@@ -9,13 +9,15 @@ int main() {
 
     std::string line;
     std::ifstream myfile("../my-file.txt");
+    int number = 0;
     if (myfile.is_open()) {
         while (getline(myfile, line)) {
             std::cout << line << '\n';
+            ++number;
         }
         myfile.close();
     } else std::cout << "Unable to open file";
 
-
+    std::cout << "\n\nnumber of lines:" << number << std::endl;
     return 0;
 }
