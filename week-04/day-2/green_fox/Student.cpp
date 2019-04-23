@@ -19,7 +19,7 @@ void Student::getGoal() {
 }
 
 void Student::introduce() {
-    std::cout << "Hi I'm " << getName() << " a " << getAge() << "year old " << genderToString() << " from " << _previousOrganisation << " who skipped " << _skippedDays << " days." << std::endl;
+    std::cout << "Hi I'm " << getName() << " a " << getAge() << " year old " << genderToString() << " from " << _previousOrganisation << " who skipped " << _skippedDays << " days." << std::endl;
 }
 
 void Student::skipDays(int numberOfDays) {
