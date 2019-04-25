@@ -4,18 +4,12 @@
 
 #include <string>
 
-static const size_t npos = -1;
-
 bool isAnagram(std::string text1, std::string text2)
 {
     bool isAnagram = true;
     int counter1 = 0, counter2 = 0;
     if (text1.size() == text2.size()) {
         for (int i = 0; i < text1.size(); ++i) {
-            if (text2.find(text1.at(i)) == npos) {
-                isAnagram = false;
-                return isAnagram;
-            }
             for (int j = 0; j < text2.size(); ++j) {
                 if (text1.at(i) == text1.at(j)) {
                     counter1++;
