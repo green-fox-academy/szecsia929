@@ -6,6 +6,6 @@
 
 std::string getApple()
 {
-    return "applee";
+    return "apple";
 }
 
