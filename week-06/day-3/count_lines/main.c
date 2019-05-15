@@ -17,14 +17,20 @@ int lineCounter(char *fileName)
 {
     int counter = 0;
     FILE *myFile;
+
     myFile = fopen(fileName, "r");
+
     if (myFile == NULL) {
         return 0;
     }
+
     char line[10];
+
     while (fgets(line, 10, myFile) != NULL) {
         counter++;
     }
+
+    fclose(myFile);
 
     return counter;
 }

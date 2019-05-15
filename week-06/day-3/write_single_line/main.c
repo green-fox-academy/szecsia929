@@ -9,5 +9,6 @@ int main()
     FILE *myFile;
     myFile = fopen("../my-file.txt", "w");
     fputs("Alex Szecsi", myFile);
+    fclose(myFile);
     return 0;
 }
