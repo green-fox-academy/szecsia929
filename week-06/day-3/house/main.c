@@ -21,9 +21,9 @@ typedef struct house {
     float area;
 } House;
 
-int worthToBuy(House *house);
+int worthToBuy(House house);
 
-int countHousesWorthToBuy(House houses[], int length);
+int countHousesWorthToBuy(House *houses, int length);
 
 int main()
 {
@@ -41,16 +41,16 @@ int main()
     return 0;
 }
 
-int worthToBuy(House *house)
+int worthToBuy(House house)
 {
-    return (house->price < 400 * house->area) ? 1 : 0;
+    return (house.price < 400 * house.area) ? 1 : 0;
 }
 
-int countHousesWorthToBuy(House houses[], int length)
+int countHousesWorthToBuy(House *houses, int length)
 {
     int counter = 0;
     for (int i = 0; i < length; ++i) {
-        if (worthToBuy(&houses[i])) {
+        if (worthToBuy(houses[i])) {
             counter++;
         }
     }
