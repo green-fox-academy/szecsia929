@@ -9,12 +9,12 @@ void insertAtTheEnd(list *head, int data)
     list *newNode = (list *) malloc(sizeof(list));
     newNode->data = data;
     newNode->next = NULL;
-
+    list *temp = head;
     for (list *it = head; it != NULL; it = it->next) {
-        if (it->next == NULL) {
-            it->next = newNode;
-        }
+        temp = it;
     }
+    temp->next = newNode;
+
 }
 
 void insertAtTheBeginning(list *head, int data)
@@ -89,10 +89,10 @@ list *bubbleSort(list *head)
 {
     for (list *it = head; it != NULL; it = it->next) {
         for (list *jt = head; jt != NULL; jt = jt->next) {
-            if (it->next->data > jt->next->data) {
-                list *buff = it;
-                it->next = jt->next;
-                jt->next = buff->next;
+            if (it->data < jt->data) {
+                int temp = it->data;
+                it->data = jt->data;
+                jt->data = temp;
             }
         }
     }
@@ -102,11 +102,11 @@ list *bubbleSort(list *head)
 list *insertionSort(list *head)
 {
     for (list *it = head; it != NULL; it = it->next) {
-        for (list *jt = it; jt->data < it->data; jt = jt->next) {
-            if (jt->data < it->data) {
-                list *temp = it;
-                it->next = jt->next;
-                jt->next = temp->next;
+        for (list *jt = head; jt != it; jt = jt->next) {
+            if (it->data < jt->data) {
+                int temp = it->data;
+                it->data = jt->data;
+                jt->data = temp;
                 continue;
             }
         }
