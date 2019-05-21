@@ -27,7 +27,7 @@ int main(void)
 			}
 			counter++;
 		}
-		if (counter == 4) {
+		if (counter == 5) {
 			BSP_LED_On(LED1);
 		}
 	}
