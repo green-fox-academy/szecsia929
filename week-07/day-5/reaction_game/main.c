@@ -12,6 +12,7 @@
 #include "stm32746g_discovery.h"
 #include "stm32746g_discovery_lcd.h"
 #include "stm32746g_discovery_ts.h"
+#include "stdio.h"
 
 static void Error_Handler(void);
 static void SystemClock_Config(void);
@@ -34,9 +35,15 @@ void TS_Init()
 int main(void)
 {
 	HAL_Init();
+	__HAL_RCC_RNG_CLK_ENABLE()
+	;
 	SystemClock_Config();
 	LCD_Init();
 	TS_Init();
+
+	RNG_HandleTypeDef rng_handle;
+	rng_handle.Instance = RNG;
+	HAL_RNG_Init(&rng_handle);
 
 	/* drawing text */
 	BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
@@ -50,6 +57,8 @@ int main(void)
 	int counter = 0;
 	float time = 0;
 	float timeSum = 0;
+	int Xpos;
+	int Ypos;
 	uint8_t char_buffer[2];
 
 	while (1) {
@@ -57,8 +66,6 @@ int main(void)
 		if (ts_state.touchDetected && startFlag == 0) {
 			startFlag = 1;
 			BSP_LCD_Clear(LCD_COLOR_WHITE);
-			BSP_LCD_SetTextColor(LCD_COLOR_RED);
-			BSP_LCD_FillRect(BSP_LCD_GetXSize() / 2 - 25, BSP_LCD_GetYSize() / 2 - 25, 50, 50);
 			BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 			while (ts_state.touchDetected) {
 				BSP_TS_GetState(&ts_state);
@@ -68,14 +75,19 @@ int main(void)
 			}
 		}
 		if (startFlag) {
+			Xpos = (int) HAL_RNG_GetRandomNumber(&rng_handle) % (BSP_LCD_GetXSize() - 100) + 50;
+			Ypos = (int) HAL_RNG_GetRandomNumber(&rng_handle) % (BSP_LCD_GetYSize() - 100) + 50;
+			BSP_LCD_SetTextColor(LCD_COLOR_RED);
+			BSP_LCD_FillRect(Xpos, Ypos, 50, 50);
 			while (!(ts_state.touchDetected)) {
 				time += 0.01;
 				HAL_Delay(10);
 				sprintf(char_buffer, "%.2f", time);
+				BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 				BSP_LCD_DisplayStringAt(0, time_positionY, char_buffer, LEFT_MODE);
 				BSP_TS_GetState(&ts_state);
-				if (ts_state.touchDetected && ts_state.touchX[0] > BSP_LCD_GetXSize() / 2 - 25 && ts_state.touchX[0] < BSP_LCD_GetXSize() / 2 + 25
-						&& ts_state.touchY[0] > BSP_LCD_GetYSize() / 2 - 25 && ts_state.touchY[0] < BSP_LCD_GetYSize() / 2 + 25) {
+				if (ts_state.touchDetected && ts_state.touchX[0] > Xpos && ts_state.touchX[0] < Xpos + 50 && ts_state.touchY[0] > Ypos
+						&& ts_state.touchY[0] < Ypos + 50) {
 					while (ts_state.touchDetected) {
 						BSP_TS_GetState(&ts_state);
 						if (!(ts_state.touchDetected)) {
@@ -83,6 +95,9 @@ int main(void)
 						}
 					}
 					time_positionY += 10;
+					BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+					BSP_LCD_FillRect(Xpos, Ypos, 50, 50);
+					BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 					break;
 				} else {
 					while (ts_state.touchDetected) {
@@ -91,6 +106,7 @@ int main(void)
 							break;
 						}
 						sprintf(char_buffer, "%.2f", time);
+						BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 						BSP_LCD_DisplayStringAt(0, time_positionY, char_buffer, LEFT_MODE);
 					}
 				}
