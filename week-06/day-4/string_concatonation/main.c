@@ -11,21 +11,24 @@ char *concatenate(char *string1, char *string2);
 
 int main()
 {
-    char str1[] = "";
-    char str2[] = "";
-    char str3[] = "string1string1string1string1string1string1string1string1string1\n";
-    char str4[] = "string2string2string2string2string2string2string2string2string2\n";
+    char *string = (char *) malloc(sizeof(char));
+    string = "hello bazdmeg";
+    printf("%s\n", string);
+    free(string);
+    string = NULL;
+    printf("%s\n", string);
 
-    printf("%s\n", concatenate(str1, str2));
-    printf("%s\n", concatenate(str3, str4));
 }
 
 int length(char *string)
 {
     int length = 0;
-    for (int i = 0; string[i] != 0; i++) {
+    for (int i = 0; string[i] != '\0'; i++) {
         length++;
     }
     return length;
 }
 
+char *concatenate(char *string1, char *string2)
+{
+}
